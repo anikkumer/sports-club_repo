@@ -21,34 +21,48 @@ const Body = () => {
           </div>
         </div>
         <div className="border-2 border-yellow-500 col-span-4">
-          <div className="text-2xl font-bold">
+          {/* picture */}
+          <div className="p-2 text-2xl font-bold mb-4">
             <img
               className="rounded-xl mb-4"
               src="https://pbs.twimg.com/media/FZqVpnbXgAA2Z1b.jpg"
               alt="tom"
             />
             <h1>Anik Kumer Dey</h1>
-            <h2>Majortila, Sylhet</h2>
+            <h2 className="text-xl">Majortila, Sylhet</h2>
           </div>
-          <div>
-            <h1>
-              Weight :<span className="font-bold"> 50kg</span>
+
+          <div className="flex justify-center mb-4  ">
+            <h1 className="mr-2">
+              Weight : <span className="font-bold"> 50kg</span>
             </h1>
-            <h1>
-              Height :<span className="font-bold"> 5feet4inch</span>
+
+            <h1 className="mr-2">
+              Height : <span className="font-bold"> 5feet4inch</span>
             </h1>
+
             <h1>
-              Age :<span className="font-bold"> 24years</span>
+              Age : <span className="font-bold"> 24years</span>
             </h1>
           </div>
-          <div>
-            <h1>Add a bread</h1>
-            <div>
-              <button>10s</button>
-              <button>20s</button>
-              <button>30s</button>
-              <button>40s</button>
-              <button>50s</button>
+          <div className=" p-2">
+            <h1 className="text-xl mb-2 ">Add a break</h1>
+            <div className="flex justify-evenly mb-3">
+              <button className="border border-green-600 rounded bg-green-400 p-1">
+                10s
+              </button>
+              <button className="border border-green-600 rounded bg-green-400 p-1">
+                20s
+              </button>
+              <button className="border border-green-600 rounded bg-green-400 p-1">
+                30s
+              </button>
+              <button className="border border-green-600 rounded bg-green-400 p-1">
+                40s
+              </button>
+              <button className="border border-green-600 rounded bg-green-400 p-1">
+                50s
+              </button>
             </div>
           </div>
           <div>
