@@ -47,7 +47,7 @@ const Body = () => {
           </div>
           <div className=" p-2">
             <h1 className="text-xl mb-2 ">Add a break</h1>
-            <div className="flex justify-evenly mb-3">
+            <div className="flex justify-evenly mb-3 border border-green-400 p-2 rounded">
               <button className="border border-green-600 rounded bg-green-400 p-1">
                 10s
               </button>
@@ -65,14 +65,14 @@ const Body = () => {
               </button>
             </div>
           </div>
-          <div>
-            <h1>Exercise details</h1>
+          <div className="mb-6">
+            <h1 className="text-xl p-2">Exercise details</h1>
             <div>
-              <h1>Exercise time:</h1>
+              <h1 className="text-lg font-bold">Exercise time:</h1>
               <input type="text" className="border border-black" />
             </div>
             <div>
-              <h1>Break time:</h1>
+              <h1 className="text-lg font-bold">Break time:</h1>
               <input type="text" className="border border-black" />
             </div>
           </div>
