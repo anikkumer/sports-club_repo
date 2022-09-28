@@ -1,0 +1,38 @@
+[{
+    "name":"Football",
+    "id":101,
+    "img":"https://www.bssnews.net/assets/news_photos/2021/06/19/image-185-1624112847.jpg",
+    "duration":90,
+    "details":"Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. Unqualified, the word football normally means the form of football that is the most popular where the word is used. Sports commonly called football include association football (known as soccer in North America and Oceania); gridiron football (specifically American football or Canadian football); Australian rules football; rugby union and rugby league; and Gaelic football.[1] These various forms of football share to varying extent common origins and are known as football codes."
+},
+{
+    "name":"Boxing",
+    "id":102,
+    "img":"https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Ym94aW5nfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+    "duration":47,
+    "details":"Boxing (also known as Western boxing or pugilism) is a combat sport in which two people, usually wearing protective gloves and other protective equipment such as hand wraps and mouthguards, throw punches at each other for a predetermined amount of time in a boxing ring."
+},{
+    "name":"Judo",
+    "id":103,
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/KOCIS_Korea_Judo_Kim_Jaebum_London_36_%287696361164%29.jpg/1200px-KOCIS_Korea_Judo_Kim_Jaebum_London_36_%287696361164%29.jpg",
+    "duration":20,
+    "details":"Regulation time for all men's matches will be five minutes, and regulation time for all women's matches will be four minutes. There are not multiple rounds during regulation time, but if there is no winner at the end of regulation time, judokas will compete in a sudden-death overtime."
+},{
+    "name":"Basketball ",
+    "id":104,
+    "img":"https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFza2V0JTIwYmFsbHxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "duration":60,
+    "details":"Any player, at any given time, cannot willingly touch/move a person with contact. The basketball cannot be kicked or hit with a fist. All players at all positions are subject to the rules of the game. No player can touch the ball while it is traveling into the basket trying to disrupt its projectile."
+},{
+    "name":"Table tennis",
+    "id":105,
+    "img":"https://www.paralympic.org/sites/default/files/images/150413103127066_LON_0109_4685.jpg",
+    "duration":60,
+    "details":"Table tennis, also known as ping-pong and whiff-whale, is a sport in which two or four players hit a lightweight ball, also known as the ping-pong ball, back and forth across a table using small solid rackets. The game takes place on a hard table divided by a net. Except for the initial serve, the rules are generally as follows: players must allow a ball played toward them to bounce once on their side of the table and must return it so that it bounces on the opposite side at least once."
+},{
+    "name":"Hockey",
+    "id":106,
+    "img":"https://cdn.britannica.com/15/201015-050-E24FA163/Field-hockey-match-Poland-Spain-2017.jpg",
+    "duration":60,
+    "details":"Hockey is a term used to denote various types of both summer and winter team sports which originated on either an outdoor field, sheet of ice, or dry floor such as in a gymnasium. There are many types of hockey. Some games make the use of skates, either wheeled, or bladed while others do not. In order to help make the distinction between these various games, the word."
+}]
