@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Card from "../Card/Card";
 
 const Body = () => {
   const [datas, setDatas] = useState([]);
@@ -12,36 +11,45 @@ const Body = () => {
   const handleBreakTen = () => {
     const breakTime = document.getElementById("break-time");
     breakTime.value = "";
-    breakTime.value = "               10 min";
+    breakTime.value = "10";
   };
   const handleBreakTwenty = () => {
     const breakTime = document.getElementById("break-time");
     breakTime.innerHTML = "";
     breakTime.value = "";
-    breakTime.value = "               20 min";
+    breakTime.value = "20";
   };
   const handleBreakThirty = () => {
     const breakTime = document.getElementById("break-time");
     breakTime.innerHTML = "";
     breakTime.value = "";
-    breakTime.value = "               30 min";
+    breakTime.value = "30";
   };
   const handleBreakForty = () => {
     const breakTime = document.getElementById("break-time");
     breakTime.innerHTML = "";
     breakTime.value = "";
-    breakTime.value = "               40 min";
+    breakTime.value = "40";
   };
   const handleBreakFifty = () => {
     const breakTime = document.getElementById("break-time");
     breakTime.innerHTML = "";
     breakTime.value = "";
-    breakTime.value = "               50 min";
+    breakTime.value = "50";
   };
-  const handleExerciseTime = (id) => {
-    const exerciseTime = document.getElementById("exercise-time");
-    exerciseTime.value = 0;
-    console.log(id);
+
+  const [list, setList] = useState([]);
+  const handleAddToList = (Li) => {
+    const newList = [...list, Li];
+    setList(newList);
+    console.log(newList);
+    let totalTime = 0;
+
+    for (const lis of newList) {
+      totalTime = totalTime + lis.duration;
+      console.log(totalTime);
+      document.getElementById("exercise-time").value = totalTime;
+    }
   };
 
   return (
@@ -51,17 +59,33 @@ const Body = () => {
           <h1 className="text-2xl font-bold m-3">Today's Sports </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
             {datas.map((data) => (
-              <Card
+              <div
                 key={data.id}
-                data={data}
-                handleExerciseTime={handleExerciseTime}
-              ></Card>
+                className="border border-green-400 rounded-lg "
+              >
+                <img
+                  className="object-cover rounded-xl h-48 w-96 mb-2"
+                  src={data.img}
+                  alt="hello"
+                ></img>
+                <h1 className="mb-4 text-2xl font-bold">{data.name}</h1>
+                <h1 className="data-duration border border-green-400 rounded-sm m-4">
+                  {data.duration}
+                </h1>
+                <p className="m-4">{data.details}</p>
+                <button
+                  onClick={() => handleAddToList(data)}
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                >
+                  Add to list
+                </button>
+              </div>
             ))}
           </div>
         </div>
         <div className="col-span-12  md:col-span-4 ">
           <h1 className="text-2xl font-bold mb-6">Personal Info</h1>
-          {/* picture */}
+
           <div className="p-2 text-2xl font-bold mb-4">
             <img
               className="rounded-xl mb-4"
@@ -127,16 +151,18 @@ const Body = () => {
               <input
                 id="exercise-time"
                 type="text"
-                className="border border-black"
+                className=" text-center border border-black"
               />
+              <span className="text-xl font-semibold">min</span>
             </div>
             <div>
               <h1 className="text-lg font-bold">Break time:</h1>
               <input
                 id="break-time"
                 type="text"
-                className="border border-black"
+                className="text-center border border-black"
               />
+              <span className="text-xl font-semibold">min</span>
             </div>
           </div>
           <div>
