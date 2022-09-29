@@ -12,15 +12,15 @@ const Body = () => {
   return (
     <>
       <div className="grid grid-cols-12 ">
-        <div className="col-span-8">
+        <div className="col-span-12 md:col-span-8  ">
           <h1 className="text-2xl font-bold m-3">Today's Sports </h1>
-          <div className="grid grid-cols-3 gap-4 p-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
             {datas.map((data) => (
               <Card key={data.id} data={data}></Card>
             ))}
           </div>
         </div>
-        <div className=" col-span-4">
+        <div className="col-span-12  md:col-span-4 ">
           <h1 className="text-2xl font-bold mb-6">Personal Info</h1>
           {/* picture */}
           <div className="p-2 text-2xl font-bold mb-4">
@@ -50,19 +50,19 @@ const Body = () => {
             <h1 className="text-xl mb-2 ">Add a break</h1>
             <div className="flex justify-evenly mb-3 border border-green-400 p-2 rounded">
               <button className="border border-green-600 rounded bg-green-400 p-1">
-                10s
+                10min
               </button>
               <button className="border border-green-600 rounded bg-green-400 p-1">
-                20s
+                20min
               </button>
               <button className="border border-green-600 rounded bg-green-400 p-1">
-                30s
+                30min
               </button>
               <button className="border border-green-600 rounded bg-green-400 p-1">
-                40s
+                40min
               </button>
               <button className="border border-green-600 rounded bg-green-400 p-1">
-                50s
+                50min
               </button>
             </div>
           </div>
