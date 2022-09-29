@@ -8,7 +8,35 @@ const Body = () => {
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
-  console.log(datas);
+  const handleBreakTen = () => {
+    const breakTime = document.getElementById("break-time");
+    breakTime.value = "";
+    breakTime.value = "               10 min";
+  };
+  const handleBreakTwenty = () => {
+    const breakTime = document.getElementById("break-time");
+    breakTime.innerHTML = "";
+    breakTime.value = "";
+    breakTime.value = "               20 min";
+  };
+  const handleBreakThirty = () => {
+    const breakTime = document.getElementById("break-time");
+    breakTime.innerHTML = "";
+    breakTime.value = "";
+    breakTime.value = "               30 min";
+  };
+  const handleBreakForty = () => {
+    const breakTime = document.getElementById("break-time");
+    breakTime.innerHTML = "";
+    breakTime.value = "";
+    breakTime.value = "               40 min";
+  };
+  const handleBreakFifty = () => {
+    const breakTime = document.getElementById("break-time");
+    breakTime.innerHTML = "";
+    breakTime.value = "";
+    breakTime.value = "               50 min";
+  };
   return (
     <>
       <div className="grid grid-cols-12 ">
@@ -49,19 +77,34 @@ const Body = () => {
           <div className=" p-2">
             <h1 className="text-xl mb-2 ">Add a break</h1>
             <div className="flex justify-evenly mb-3 border border-green-400 p-2 rounded">
-              <button className="border border-green-600 rounded bg-green-400 p-1">
+              <button
+                onClick={handleBreakTen}
+                className="border border-green-600 rounded bg-green-400 p-1"
+              >
                 10min
               </button>
-              <button className="border border-green-600 rounded bg-green-400 p-1">
+              <button
+                onClick={handleBreakTwenty}
+                className="border border-green-600 rounded bg-green-400 p-1"
+              >
                 20min
               </button>
-              <button className="border border-green-600 rounded bg-green-400 p-1">
+              <button
+                onClick={handleBreakThirty}
+                className="border border-green-600 rounded bg-green-400 p-1"
+              >
                 30min
               </button>
-              <button className="border border-green-600 rounded bg-green-400 p-1">
+              <button
+                onClick={handleBreakForty}
+                className="border border-green-600 rounded bg-green-400 p-1"
+              >
                 40min
               </button>
-              <button className="border border-green-600 rounded bg-green-400 p-1">
+              <button
+                onClick={handleBreakFifty}
+                className="border border-green-600 rounded bg-green-400 p-1"
+              >
                 50min
               </button>
             </div>
@@ -74,7 +117,11 @@ const Body = () => {
             </div>
             <div>
               <h1 className="text-lg font-bold">Break time:</h1>
-              <input type="text" className="border border-black" />
+              <input
+                id="break-time"
+                type="text"
+                className="border border-black"
+              />
             </div>
           </div>
           <div>
