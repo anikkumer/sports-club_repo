@@ -11,16 +11,17 @@ const Body = () => {
   console.log(datas);
   return (
     <>
-      <div className="border-2 border-red-500 grid grid-cols-12 ">
-        <div className="border-2 border-blue-500 col-span-8">
-          <h1>Today's Sports </h1>
+      <div className="grid grid-cols-12 ">
+        <div className="col-span-8">
+          <h1 className="text-2xl font-bold m-3">Today's Sports </h1>
           <div className="grid grid-cols-3 gap-4 p-2">
             {datas.map((data) => (
               <Card key={data.id} data={data}></Card>
             ))}
           </div>
         </div>
-        <div className="border-2 border-yellow-500 col-span-4">
+        <div className=" col-span-4">
+          <h1 className="text-2xl font-bold mb-6">Personal Info</h1>
           {/* picture */}
           <div className="p-2 text-2xl font-bold mb-4">
             <img
