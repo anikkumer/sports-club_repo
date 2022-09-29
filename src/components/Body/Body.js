@@ -8,6 +8,7 @@ const Body = () => {
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
+
   const handleBreakTen = () => {
     const breakTime = document.getElementById("break-time");
     breakTime.value = "";
@@ -37,6 +38,12 @@ const Body = () => {
     breakTime.value = "";
     breakTime.value = "               50 min";
   };
+  const handleExerciseTime = (id) => {
+    const exerciseTime = document.getElementById("exercise-time");
+    exerciseTime.value = 0;
+    console.log(id);
+  };
+
   return (
     <>
       <div className="grid grid-cols-12 ">
@@ -44,7 +51,11 @@ const Body = () => {
           <h1 className="text-2xl font-bold m-3">Today's Sports </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
             {datas.map((data) => (
-              <Card key={data.id} data={data}></Card>
+              <Card
+                key={data.id}
+                data={data}
+                handleExerciseTime={handleExerciseTime}
+              ></Card>
             ))}
           </div>
         </div>
@@ -113,7 +124,11 @@ const Body = () => {
             <h1 className="text-xl p-2">Exercise details</h1>
             <div>
               <h1 className="text-lg font-bold">Exercise time:</h1>
-              <input type="text" className="border border-black" />
+              <input
+                id="exercise-time"
+                type="text"
+                className="border border-black"
+              />
             </div>
             <div>
               <h1 className="text-lg font-bold">Break time:</h1>
